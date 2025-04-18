@@ -40,11 +40,24 @@ Azure-Sentinel-Honeypot-Project/
 
 ## Result
 
-### Attack Map Visualization
+One of the key outcomes of this project is the **Attack Map** created within Azure Sentinel Workbooks. This interactive map provides a geographical representation of the attack origins, showcasing where the attempted breaches are coming from.
 
-One of the key outcomes of this project is the **Attack Map** created within **Azure Sentinel Workbooks**. This interactive map provides a geographical representation of the attack origins, showcasing where the attempted breaches are coming from.
+The **Attack Map** not only displays the attack locations but also allows for deeper analysis of attack behavior, such as login attempts and their corresponding times. By enriching the attack logs with **GeoIP** data, it adds contextual information that is crucial for incident response teams to make better decisions.
 
-The **Attack Map** not only displays locations but can also be drilled down to understand the attack behavior, such as login attempts and their corresponding times. By enriching the attack logs with **GeoIP** data, it adds contextual information that is crucial for incident response teams.
+### Key Insights
+- **Geo-location Insights:** The GeoIP enrichment allows for precise identification of the geographical regions from which attacks originate. This helps security teams focus on specific threat vectors.
+- **Security Monitoring:** The setup of this honeypot, combined with its integration into **Azure Sentinel**, provides continuous monitoring of suspicious activities, making it a useful tool for security operations in real-world environments.
+- **Actionable Data:** With **KQL queries**, you can drill deeper into the logs, filter results, and identify suspicious patterns, making this project an ideal learning tool for analyzing and responding to security threats.
+
+### Visual Results
+
+Below are some visual results of the attack map and the enriched logs:
+
+1. **Attack Map Visualization:**
+
+   ![Attack Map Sample](screenshots/attack-map-sample.png)
+
+   This heatmap shows the geographical locations of the failed login attempts and other suspicious activity.
 
 ### Key Insights
 
