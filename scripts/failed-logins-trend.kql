@@ -1,0 +1,9 @@
+# KQL Queries for Azure Sentinel Honeypot Project
+
+## 1. Failed Login Attempts
+```kusto
+SecurityEvent
+| where EventID == 4625  // Failed login events
+| where AccountType == "User"  // Focus on user accounts
+| summarize FailedLoginsCount = count() by Account, IpAddress, bin(TimeGenerated, 1h)  // Count failed logins per hour by account and IP address
+| order by FailedLoginsCount desc  // Order by the count of failed logins
