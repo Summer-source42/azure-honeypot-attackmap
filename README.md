@@ -1,26 +1,42 @@
-# Azure Sentinel Honeypot Project
+# 🛡️ Azure Honeypot AttackMap
 
-## 🚀 Overview
+An educational security project that simulates real-world cyberattacks using a vulnerable Windows VM deployed in **Microsoft Azure**. Integrated with **Azure Sentinel**, this setup visualizes incoming threats via a live **Attack Map**, enhanced with **GeoIP** data and KQL queries.
 
-Welcome to the **Azure Sentinel Honeypot Project**! This project aims to simulate a real-world cyberattack scenario using **Microsoft Azure** and **Azure Sentinel** to capture and analyze malicious activities. By setting up a vulnerable **Windows VM** in Azure, we can monitor and visualize cyberattacks using **Azure Sentinel** for security monitoring and log analysis.
+---
 
-Through this project, you'll learn how to deploy a honeypot, collect and analyze logs, query those logs using **Kusto Query Language (KQL)**, and create an interactive **attack map** for visualizing attack sources.
+## 🔍 Overview
 
-## 🛠️ Key Features
+This project demonstrates how to deploy a honeypot in Azure, monitor malicious login attempts, and visualize the source of these attacks in real time using Sentinel Workbooks. It's designed to help you explore:
 
-- **Honeypot Deployment**: Create an intentionally vulnerable **Windows VM** in **Azure** to act as a honeypot.
-- **Security Monitoring with Sentinel**: Set up **Azure Sentinel** for log collection, aggregation, and threat detection.
-- **Advanced Log Queries**: Use **KQL** to query logs for suspicious activities (e.g., failed login attempts).
-- **Geo-location Enrichment**: Enhance logs with geographic data to visualize the location of attacks.
-- **Attack Map Creation**: Build and display an interactive attack map in **Sentinel Workbooks**.
+- Attack behavior in the wild
+- Log collection and threat detection with Sentinel
+- Enriching logs with location data (GeoIP)
+- Building insightful visualizations with KQL and Sentinel Workbooks
+
+---
+
+## ⚙️ Key Features
+
+✅ Deploy a vulnerable Windows VM honeypot  
+✅ Stream Windows Security Events into Azure Sentinel  
+✅ Detect failed login attempts via KQL  
+✅ Enrich data with **GeoIP Watchlists**  
+✅ Visualize attacks on a world map using Sentinel Workbooks  
+✅ Learn SIEM fundamentals hands-on
+
+---
 
 ## 💻 Technologies Used
 
-- **Microsoft Azure** - Cloud platform for deploying and managing virtual machines and other services.
-- **Azure Sentinel** - Cloud-native SIEM (Security Information and Event Management) solution for security monitoring.
-- **Kusto Query Language (KQL)** - Language for querying data in Azure Sentinel.
-- **GeoIP Watchlist** - For enriching logs with geolocation information.
-- **Sentinel Workbooks** - For data visualization and creating custom reports.
+- **Microsoft Azure** – Cloud infrastructure provider
+- **Azure Sentinel** – Cloud-native SIEM & SOAR platform
+- **Kusto Query Language (KQL)** – For querying and analyzing security logs
+- **GeoLite2** – GeoIP data source (summarized version)
+- **Sentinel Workbooks** – For interactive dashboards and visualization
+- **Windows 10 VM** – Honeypot target
+
+---
+
 
 ## 📂 Project Structure
 
@@ -37,17 +53,21 @@ Azure-Sentinel-Honeypot-Project/
     └── steps.md             # Step-by-step guide for deploying and configuring the honeypot
 ```
 
+## 🧭 Architecture
 
-## Result
+This diagram outlines the data flow and services used in the Azure Honeypot AttackMap project:
 
-One of the key outcomes of this project is the **Attack Map** created within Azure Sentinel Workbooks. This interactive map provides a geographical representation of the attack origins, showcasing where the attempted breaches are coming from.
+![Architecture Diagram](architecture/azure-architecture.png)
 
-The **Attack Map** not only displays the attack locations but also allows for deeper analysis of attack behavior, such as login attempts and their corresponding times. By enriching the attack logs with **GeoIP** data, it adds contextual information that is crucial for incident response teams to make better decisions.
+**How It Works:**
 
-### Key Insights
-- **Geo-location Insights:** The GeoIP enrichment allows for precise identification of the geographical regions from which attacks originate. This helps security teams focus on specific threat vectors.
-- **Security Monitoring:** The setup of this honeypot, combined with its integration into **Azure Sentinel**, provides continuous monitoring of suspicious activities, making it a useful tool for security operations in real-world environments.
-- **Actionable Data:** With **KQL queries**, you can drill deeper into the logs, filter results, and identify suspicious patterns, making this project an ideal learning tool for analyzing and responding to security threats.
+1. **VM Deployment**: A Windows 10 VM acts as a decoy (honeypot).
+2. **Security Logging**: Failed login attempts are captured as `EventID 4625`.
+3. **Log Analytics Workspace (LAW)**: Events are streamed into Sentinel via LAW.
+4. **GeoIP Watchlist**: Enriches IP data with geolocation info.
+5. **Sentinel Workbook**: KQL queries pull enriched logs and render the attack map.
+
+---
 
 ### Visual Results
 
