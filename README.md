@@ -62,7 +62,7 @@ To replicate this project, follow the summarized setup steps below or refer to t
 3. Import the GeoIP Watchlist into Sentinel.
 4. Use the provided workbook for attack location visualization.
 
-For detailed instructions, please refer to the [Setup Guide](setup-guide/steps.md).
+For detailed instructions, please refer to the [Setup Guide](setup/azure-setup-guide.md).
 
 
 ---
