@@ -57,7 +57,7 @@ Azure-Sentinel-Honeypot-Project/
 
 This diagram outlines the data flow and services used in the Azure Honeypot AttackMap project:
 
-![Architecture Diagram](architecture/azure-architecture.png)
+![Architecture Diagram](architecture/Azure_Honeypot.jpeg)
 
 **How It Works:**
 
