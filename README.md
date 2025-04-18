@@ -55,39 +55,15 @@ The **Attack Map** not only displays locations but can also be drilled down to u
 ---
 
 ## Getting Started
+To replicate this project, follow the summarized setup steps below or refer to the full setup guide in `setup-guide/steps.md`:
 
-### Prerequisites
+1. Create an Azure account and set up a VM.
+2. Configure Azure Sentinel and connect the VM.
+3. Import the GeoIP Watchlist into Sentinel.
+4. Use the provided workbook for attack location visualization.
 
-Before setting up the project, ensure that you have the following:
+For detailed instructions, please refer to the [Setup Guide](setup-guide/steps.md).
 
-- **Azure Account**: Create a free [Azure account](https://azure.microsoft.com/en-us/free/) or use a paid subscription.
-- **Basic Azure Knowledge**: Familiarity with Azure Virtual Machines (VMs) and **Azure Sentinel**.
-- **KQL Knowledge**: Basic understanding of **Kusto Query Language (KQL)** will be helpful.
-
-### Setup Instructions
-
-To replicate this project, follow the setup guide detailed in `setup-guide/steps.md`. Below is a summary:
-
-1. **Create an Azure Subscription**:
-   - Sign up for a free [Azure account](https://azure.microsoft.com/en-us/free/).
-   - If Azure doesn't allow creating a free account, you can use a paid subscription or join the Cyber Range.
-
-2. **Create a Virtual Machine**:
-   - Set up a **Windows 10** virtual machine in Azure (configure VM size and credentials).
-   - Allow all inbound traffic by modifying the **Network Security Group** for the VM.
-
-3. **Disable Windows Firewall**:
-   - Log into the VM and turn off the firewall to allow inbound attacks (Windows -> `wf.msc` -> turn off firewall).
-
-4. **Set Up Azure Sentinel**:
-   - Create a **Log Analytics Workspace (LAW)** in Azure Sentinel.
-   - Connect the VM to **Azure Sentinel** and configure it to send **Windows Security Events** logs to Sentinel.
-
-5. **Enrich Logs with GeoIP Data**:
-   - Import the **GeoIP Watchlist** into Azure Sentinel to add location data to your attack logs.
-
-6. **Visualize Attack Locations**:
-   - Use the **Attack Map Workbook** (`sentinel-workbook/attack-map.json`) to visualize attacks geographically in **Azure Sentinel**.
 
 ---
 
