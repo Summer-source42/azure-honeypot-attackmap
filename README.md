@@ -90,3 +90,23 @@ To replicate this project, follow the setup guide detailed in `setup-guide/steps
    - Use the **Attack Map Workbook** (`sentinel-workbook/attack-map.json`) to visualize attacks geographically in **Azure Sentinel**.
 
 ---
+
+## Sentinel Attack Map Query
+
+This KQL query detects failed login attempts on your Azure Sentinel workspace and visualizes them using a geographic map based on GeoIP data. The query helps you identify patterns in login attempts across various locations globally.
+
+### Query Breakdown
+- **Failed Logins**: The query tracks failed login attempts (EventID 4625) from various IP addresses.
+- **GeoIP Enrichment**: The IP addresses are enriched with geographic data using the GeoIP watchlist, allowing the visualization of attack origins on the map.
+- **Map Visualization**: The final result is displayed on a map, using geographic coordinates (latitude and longitude) derived from the enriched data.
+
+### How to Use
+
+1. Navigate to **Azure Sentinel Workbooks** in your Azure Portal.
+2. Click on **+ New** to create a new **Workbook**.
+3. Add a **Query** to the workbook and paste the following KQL query from the `workbooks/attack-map.json` file.
+4. Configure the **Map Visualization**:
+   - Set the **Latitude** and **Longitude** fields from the query results.
+   - Adjust settings like **opacity**, **size settings**, and **color settings** as necessary.
+5. Save the workbook with an appropriate name.
+
