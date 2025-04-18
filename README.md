@@ -55,7 +55,7 @@ Below are some visual results of the attack map and the enriched logs:
 
 1. **Attack Map Visualization:**
 
-   ![Attack Map Sample](screenshots/attack-map-sample.png)
+   ![Attack Map Sample](Screenshot/Windows-vm-AttactMap - Microsoft Azure - Brave 18_04_2025 22_05_54.png)
 
    This heatmap shows the geographical locations of the failed login attempts and other suspicious activity.
 
