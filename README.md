@@ -67,7 +67,7 @@ This diagram outlines the data flow and services used in the Azure Honeypot Atta
 ---
 ## 📈 24-Hour Threat Snapshot
 
-Over the course of **24 hours**, the honeypot recorded **17,676+ failed login attempts** and other suspicious activities from global locations:
+Over the course of **24 hours**, the honeypot recorded **18,086+ failed login attempts** and other suspicious activities from global locations:
 
 - 🇸🇮 **Slovenia** – **17,600+ events**
 - 🇰🇷 **South Korea** – **262 events**
