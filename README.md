@@ -1,12 +1,9 @@
-# 🛡️ Azure Honeypot AttackMap
-
-An educational security project that simulates real-world cyberattacks using a vulnerable Windows VM deployed in **Microsoft Azure**. Integrated with **Azure Sentinel**, this setup visualizes incoming threats via a live **Attack Map**, enhanced with **GeoIP** data and KQL queries.
-
----
+# 🌍 Honeypot Project – Global Threat Detection & SIEM Integration
 
 ## 🔍 Overview
 
-This project demonstrates how to deploy a honeypot in Azure, monitor malicious login attempts, and visualize the source of these attacks in real time using Sentinel Workbooks. It's designed to help you explore:
+This project demonstrates how to deploy a high-interaction honeypot to simulate vulnerable services, monitor malicious login attempts, and visualize the source of these attacks in real time using Microsoft Sentinel Workbooks. The honeypot is configured to capture and log suspicious activities, which are then analyzed and visualized through Microsoft Sentinel for enhanced threat detection.
+It's designed to help you explore:
 
 - Attack behavior in the wild
 - Log collection and threat detection with Sentinel
@@ -68,10 +65,20 @@ This diagram outlines the data flow and services used in the Azure Honeypot Atta
 5. **Sentinel Workbook**: KQL queries pull enriched logs and render the attack map.
 
 ---
+## 📈 24-Hour Threat Snapshot
+
+Over the course of **24 hours**, the honeypot recorded **17,676+ failed login attempts** and other suspicious activities from global locations:
+
+- 🇸🇮 **Slovenia** – **17,600+ events**
+- 🇰🇷 **South Korea** – **262 events**
+- 🇮🇹 **Italy** – **216 events**
+- 🇺🇸 **United States** – **8 events**
+
+These logs were enriched with **GeoIP data**, enabling detailed geographical analysis of attack sources.
 
 ### Visual Results
 
-Below are some visual results of the attack map and the enriched logs:
+The **heatmap** below shows the geographical locations of the failed login attempts and suspicious activities.
 
 1. **Attack Map Visualization:**
 
